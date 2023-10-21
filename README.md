@@ -4,21 +4,12 @@ Team Members: Brad Lee, Olivia Qi, Jiarui Tang, Wei-Han Chen
 
 ## Technical
 
-* Use Python
+* Use react
 
-## Planning
+## Deployment
 
-[Planning](/Docs/planning.md)
-
-## Dependencies
-
-```python
-pip install flask
-pip install python-dotenv
-```
-
-## Run
-
-```python
-python app.py
+```javascript
+npm install
+npm run build
+npm start
 ```
