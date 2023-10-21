@@ -4,6 +4,8 @@ import io from "socket.io-client";
 let MapServerUrl = "http://localhost:5000"
 if(process.env.MAP_SERVER){
   MapServerUrl = process.env.MAP_SERVER
+} else if(process.env.REACT_APP_MAP_SERVER){
+  MapServerUrl = process.env.REACT_APP_MAP_SERVER
 }
 
 console.log("MapServerUrl " + MapServerUrl);
