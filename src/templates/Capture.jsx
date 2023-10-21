@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import axios from "axios";
 import Navbar from '../components/Navbar/Navbar'
+import CaptureComponent from '../components/CaptureComponent/CaptureComponent'
 
 import styles from "../styles/Profile.module.css";
 
@@ -63,9 +64,7 @@ const Profile = () => {
   <div className={styles.main_container}>
 
     < Navbar/>
-    <button className={styles.white_btn} onClick={handleLogout}>
-      Log out
-    </button>
+    < CaptureComponent/>
 
 
   </div>);
