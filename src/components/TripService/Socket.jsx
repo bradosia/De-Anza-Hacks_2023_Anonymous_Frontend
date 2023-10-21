@@ -8,6 +8,8 @@ if(process.env.MAP_SERVER){
   MapServerUrl = process.env.REACT_APP_MAP_SERVER
 }
 
+console.log("process.env.MAP_SERVER " + process.env.MAP_SERVER);
+console.log("process.env.REACT_APP_MAP_SERVER " + process.env.REACT_APP_MAP_SERVER);
 console.log("MapServerUrl " + MapServerUrl);
 
 export const socket = io(MapServerUrl + "?service=trip", {
