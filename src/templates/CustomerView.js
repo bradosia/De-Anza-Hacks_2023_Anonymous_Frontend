@@ -75,7 +75,7 @@ class App extends Component {
       return ;
     }
     this.setState({
-      messageBlock: data.message, tripBlock: <><p> Select Ride Type: </p> < SightingInfo />< p className = "requestButtonPositioning" > <RequestRideButton routeStartLat={data.routeStartLat} routeStartLong={data.routeStartLong} routeEndLat={data.routeEndLat} routeEndLong={data.routeEndLong}/></p>
+      messageBlock: data.message, tripBlock: <><p> Post Sighting Details: </p> < SightingInfo />< p className = "requestButtonPositioning" > <RequestRideButton routeStartLat={data.routeStartLat} routeStartLong={data.routeStartLong} routeEndLat={data.routeEndLat} routeEndLong={data.routeEndLong}/></p>
     </>
     });
     // set the map route
