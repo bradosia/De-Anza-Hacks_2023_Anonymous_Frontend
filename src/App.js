@@ -2,7 +2,8 @@ import React from 'react'
 import { Route, Routes, Navigate } from "react-router-dom";
 
 import Home from './templates/Home';
-import Rider from './templates/Rider'
+import CustomerView from './templates/CustomerView'
+import Capture from './templates/Capture'
 import ComponentTesting from './templates/ComponentTesting.js'
 
 import './styles/App.css'
@@ -17,7 +18,8 @@ function App() {
   const user = localStorage.getItem("token");
   return (
     <Routes>
-        <Route exact path='/' element={<Rider/>} />
+        <Route exact path='/' element={<CustomerView/>} />
+        <Route exact path='/Capture' element={<Capture/>} />
     </Routes>
   );
 }

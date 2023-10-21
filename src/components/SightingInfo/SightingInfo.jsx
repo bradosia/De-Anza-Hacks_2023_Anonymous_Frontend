@@ -8,9 +8,7 @@ import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
 import "../../styles/CostEstimation.css";
-import car1 from '../../images/car1.png'
-import car2 from '../../images/car2.png'
-import car3 from '../../images/car3.png'
+//import car1 from '../../images/car1.png'
 
 const BASE_FEE = 2.0;
 const BOOKING_FEE = 2.5;

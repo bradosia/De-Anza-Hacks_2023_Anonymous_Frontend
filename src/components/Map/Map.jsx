@@ -55,6 +55,8 @@ class App extends Component {
   refreshMarkers = (mapObj) => {
     let driverFeatureArray = [];
     let riderFeatureArray = [];
+    let furryFeatureArray = [];
+    // For customer Locations
     let timeThreshold = Date.now() - 20000;
     for (let [socketId, userObjRef] of this.locationMap) {
       if (userObjRef.timestamp < timeThreshold) {
