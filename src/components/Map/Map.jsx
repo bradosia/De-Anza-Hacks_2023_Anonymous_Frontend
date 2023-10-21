@@ -10,6 +10,7 @@ import TripService from "../TripService/emitter";
 
 import driverIcon from './driverIcon.png';
 import riderIcon from './riderIcon.png';
+import furryIcon from './furryIcon.png';
 import routeEndIcon from './routeEndIcon.png';
 
 const ACCESS_TOKEN = "pk.eyJ1IjoiYnJhZG9zaWEiLCJhIjoiY2xvMDRkZmlqMGJxOTJrcnNjeDhjZzRlaCJ9.aV8plDZBTvsao7HlQqO66g";
@@ -56,7 +57,53 @@ class App extends Component {
     let driverFeatureArray = [];
     let riderFeatureArray = [];
     let furryFeatureArray = [];
-    // For customer Locations
+
+    furryFeatureArray.push({
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-121.9915779, 37.2888722]
+      },
+      properties: {
+        description: "Humane Society Adoption Center",
+        "rotate": 0
+      }
+    });
+    furryFeatureArray.push({
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-121.9613851, 37.3819866]
+      },
+      properties: {
+        description: "Silicon Valley Animal Control Authority",
+        "rotate": 0
+      }
+    });
+    furryFeatureArray.push({
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-121.9439258, 37.3301826]
+      },
+      properties: {
+        description: "Meow Haven Kitty Rescue",
+        "rotate": 0
+      }
+    });
+
+    furryFeatureArray.push({
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-122.1098642, 37.4169237]
+      },
+      properties: {
+        description: "Palo Alto Humane Society",
+        "rotate": 0
+      }
+    });
+
     let timeThreshold = Date.now() - 20000;
     for (let [socketId, userObjRef] of this.locationMap) {
       if (userObjRef.timestamp < timeThreshold) {
@@ -102,8 +149,13 @@ class App extends Component {
       type: "FeatureCollection",
       features: riderFeatureArray
     };
+    let furryFeatures = {
+      type: "FeatureCollection",
+      features: furryFeatureArray
+    };
     this.mapboxObj.getSource("driverPoints").setData(driverFeatures);
     this.mapboxObj.getSource("riderPoints").setData(riderFeatures);
+    this.mapboxObj.getSource("furryPoints").setData(furryFeatures);
   };
 
   async positionUpdateLoop() {
@@ -129,6 +181,14 @@ class App extends Component {
 
       // Add the image to the map style.
       this.mapboxObj.addImage('riderIcon', image);
+    });
+
+    this.mapboxObj.loadImage(furryIcon, (error, image) => {
+      if (error)
+        throw error;
+
+      // Add the image to the map style.
+      this.mapboxObj.addImage('furryIcon', image);
     });
 
     this.mapboxObj.loadImage(routeEndIcon, (error, image) => {
@@ -176,6 +236,30 @@ class App extends Component {
         'icon-allow-overlap': true,
         'icon-ignore-placement': true,
         "icon-rotate": ["get", "rotate"]
+      }
+    });
+
+    // Add furry symbol layer
+    this.mapboxObj.addLayer({
+      id: "furryPoints",
+      type: "symbol",
+      source: {
+        type: "geojson",
+        data: {
+          type: "FeatureCollection",
+          features: []
+        }
+      },
+      'layout': {
+        'icon-image': 'furryIcon', // reference the image
+        'icon-size': 1,
+        'icon-allow-overlap': true,
+        'icon-ignore-placement': true,
+        "icon-rotate": ["get", "rotate"],
+        'text-field': ['get', 'description'],
+        'text-variable-anchor': ['top', 'bottom', 'left', 'right'],
+        'text-radial-offset': 1.5,
+        'text-justify': 'auto'
       }
     });
 
