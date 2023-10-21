@@ -10,15 +10,10 @@ Team Members: Brad Lee, Olivia Qi, Jiarui Tang, Wei-Han Chen
 
 [Planning](/Docs/planning.md)
 
-## Dependencies
+## Deployment
 
-```python
-pip install flask
-pip install python-dotenv
-```
-
-## Run
-
-```python
-python app.py
+```javascript
+npm install
+npm run build
+npm start
 ```
