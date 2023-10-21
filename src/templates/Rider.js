@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import '../styles/App.css'
 import Map from '../components/Map/Map'
-import RideTypeSelection from '../components/RideTypeSelection/RideTypeSelection'
+import SightingInfo from '../components/SightingInfo/SightingInfo'
 import Navbar from '../components/Navbar/Navbar'
 import Rate from '../components/Rate/Rate'
 import RequestRideButton from '../components/RequestRideButton/Button'
@@ -75,7 +75,7 @@ class App extends Component {
       return ;
     }
     this.setState({
-      messageBlock: data.message, tripBlock: <><p> Select Ride Type: </p> < RideTypeSelection />< p className = "requestButtonPositioning" > <RequestRideButton routeStartLat={data.routeStartLat} routeStartLong={data.routeStartLong} routeEndLat={data.routeEndLat} routeEndLong={data.routeEndLong}/></p>
+      messageBlock: data.message, tripBlock: <><p> Select Ride Type: </p> < SightingInfo />< p className = "requestButtonPositioning" > <RequestRideButton routeStartLat={data.routeStartLat} routeStartLong={data.routeStartLong} routeEndLat={data.routeEndLat} routeEndLong={data.routeEndLong}/></p>
     </>
     });
     // set the map route
@@ -132,6 +132,7 @@ class App extends Component {
     this.setState({
       messageBlock: data.message, tripBlock: <p>tripDriverToRiderProgress</p>
     });
+    
   }
 
   tripDriverToRiderStop = (data) => {
@@ -140,7 +141,7 @@ class App extends Component {
     this.flagRideRequested = false;
     this.setState({
       messageBlock: data.message,
-      tripBlock: <> < RideTypeSelection />< p className = "requestButtonPositioning" > <RequestRideButton/></p>
+      tripBlock: <> < SightingInfo />< p className = "requestButtonPositioning" > <RequestRideButton/></p>
     </>
     });
   }

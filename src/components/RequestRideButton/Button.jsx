@@ -19,7 +19,7 @@ class App extends Component {
 
     this.state = {
       "className": "RequestRideButtonDisabled",
-      "buttonText": "Request (First Select Ride Type)"
+      "buttonText": "Post Sighting"
     }
   }
 
@@ -65,13 +65,13 @@ class App extends Component {
     //console.log("requestRideStop Data Received:");
     //console.log(data);
     this.rideRequested = false;
-    this.setState({"className": "RequestRideButton", "buttonText": `Request ${this.tripType} @ $${this.tripCost.toFixed(2)}`});
+    this.setState({"className": "RequestRideButton", "buttonText": `POST `});
   }
 
   chooseRideType = (data) => {
     this.tripType = data.rideType;
     this.tripCost = data.cost;
-    this.setState({"className": "RequestRideButton", "buttonText": `Request ${this.tripType} @ $${this.tripCost.toFixed(2)}`});
+    this.setState({"className": "RequestRideButton", "buttonText": `POST `});
   }
 
   componentDidMount = () => {

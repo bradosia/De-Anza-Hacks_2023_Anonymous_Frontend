@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import axios from "axios";
 import Map from '../components/Map/Map'
 import DriverInstructions from '../components/DriverInstructions/DriverInstructions'
-import RideTypeSelection from '../components/RideTypeSelection/RideTypeSelection'
 import Navbar from '../components/Navbar/Navbar'
 import Rate from '../components/Rate/Rate'
 import StarRating from '../components/StarRating/StarRating'
@@ -189,8 +188,6 @@ class App extends Component {
       </main>
       <aside data-md1-3="data-md1-3" data-md1="data-md1" className="left-sidebar">
         {this.state.tripStatsBlock}
-        <p>RideTypeSelection:</p>
-        <RideTypeSelection/>
         <p>RequestRideButton:</p>
         <RequestRideButton destLong="0" destLat="0"/>
         <p>DriverConfirmTrip:</p>

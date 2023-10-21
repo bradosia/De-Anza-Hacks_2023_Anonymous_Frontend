@@ -34,8 +34,8 @@ function Navbar() {
               </Link>
             </li>
             <li className="nav-item active">
-              <Link to="/Rider" className="nav-link">
-                Rider
+              <Link to="/Capture" className="nav-link">
+                Capture
               </Link>
             </li>
           </ul>

@@ -110,56 +110,7 @@ class App extends Component {
     return (
       <div className="costEst">
         <FormControl id="chooseRide">
-          <RadioGroup
-            aria-labelledby="demo-radio-buttons-group-label"
-            defaultValue="uberX"
-            name="radio-buttons-group"
-          >
-            <Card value="uberX" onClick={chooseUberX} >
-              <CardActionArea>
-                <CardContent>
-                  <FormControlLabel
-                    value="uberX"
-                    control={<Radio />}
-                    label={this.state.uberX_Text}
-                  />
-                  <img src={car1} alt="car1" 
-                  style={{width: 250, top: this.props.top, right: this.props.right}}/>
-                  <p id="caption">UberX</p>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-
-            <Card value="confort" onClick={chooseComfort}>
-              <CardActionArea>
-                <CardContent>
-                  <FormControlLabel
-                    value="comfort"
-                    control={<Radio />}
-                    label={this.state.comfort_Text}
-                  />
-                  <img src={car2} alt="car2" 
-                  style={{width: 250, top: this.props.top, right: this.props.right}}/>
-                  <p id="caption">Newer cars with extra legroom</p>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-
-            <Card value="pool" onClick={choosePool}>
-              <CardActionArea>
-                <CardContent>
-                  <FormControlLabel
-                    value="pool"
-                    control={<Radio />}
-                    label={this.state.pool_Text}
-                  />
-                  <img src={car3} alt="car3" 
-                  style={{width: 250, top: this.props.top, right: this.props.right}}/>
-                  <p id="caption">Share the ride with 1 to 3 people</p>
-                </CardContent>
-              </CardActionArea>
-            </Card>
-          </RadioGroup>
+          <textarea id="w3review" name="w3review" rows="4" cols="50"></textarea>
         </FormControl>
       </div>
     );
