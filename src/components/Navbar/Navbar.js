@@ -13,7 +13,7 @@ function Navbar() {
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark relative-top">
       <div className="container mb-1">
         <a className="navbar-brand" href="#">
-          <strong>UBER</strong>
+          <strong>Cats Map</strong>
         </a>
         <button
           className="navbar-toggler"
