@@ -10,7 +10,7 @@ const handleLogout = () => {
 // https://getbootstrap.com/docs/4.0/components/navbar/
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark relative-top">
+    <nav className="navbar navbar-expand-lg navbar-dark navbar-bg relative-top">
       <div className="container mb-1">
         <a className="navbar-brand" href="#">
           <strong>Cats Map</strong>

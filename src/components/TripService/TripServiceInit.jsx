@@ -8,6 +8,7 @@ const TripServiceInit = () => {
 
   socket.on('positionData', (data) => {
     TripService.emit("positionData", data);
+    console.log(data)
   });
 
   // These events are for the rider to request a trip

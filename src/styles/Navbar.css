@@ -1,4 +1,4 @@
-* 
+*
 {
     margin: 0;
     padding: 0;
@@ -8,3 +8,11 @@
 ul {
     list-style-type: none;
   }
+
+.navbar-bg {
+  background-color: #d36c18;
+}
+
+.footer {
+  border-top: 2px solid #d36c18 !important;
+}
