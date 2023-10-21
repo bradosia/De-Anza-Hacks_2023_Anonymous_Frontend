@@ -10,7 +10,6 @@ import DriverConfirmTrip from '../components/DriverConfirmTrip/Element'
 import RidePickupConfirmButton from '../components/RidePickupConfirmButton/Button'
 import RequestRideButton from '../components/RequestRideButton/Button'
 import TripService from '../components/TripService/emitter';
-import * as Constants from "../constants.js"
 
 import '../styles/matthewjamestaylor/column-styles.css'
 import '../styles/matthewjamestaylor/r-c.css'

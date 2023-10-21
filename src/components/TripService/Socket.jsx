@@ -1,12 +1,17 @@
 import React from 'react';
 import io from "socket.io-client";
-import * as Constants from "../../constants.js"
 
-export const socket = io(Constants.MAP_SERVER + "?service=trip", {
+let MapServerUrl = "http://localhost:5000"
+if(process.env.MAP_SERVER){
+  MapServerUrl = process.env.MAP_SERVER
+}
+
+export const socket = io(MapServerUrl + "?service=trip", {
   cors: {
     origin: "*",
     methods: ["PUT", "GET", "POST", "DELETE", "OPTIONS"],
     credentials: false
   }
 });
+
 export const SocketContext = React.createContext();
