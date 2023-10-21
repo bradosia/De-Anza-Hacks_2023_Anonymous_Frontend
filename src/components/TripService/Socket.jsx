@@ -6,6 +6,8 @@ if(process.env.MAP_SERVER){
   MapServerUrl = process.env.MAP_SERVER
 }
 
+console.log("MapServerUrl " + MapServerUrl);
+
 export const socket = io(MapServerUrl + "?service=trip", {
   cors: {
     origin: "*",
