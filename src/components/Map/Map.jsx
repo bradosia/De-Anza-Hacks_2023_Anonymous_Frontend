@@ -104,6 +104,18 @@ class App extends Component {
       }
     });
 
+    furryFeatureArray.push({
+      type: "Feature",
+      geometry: {
+        type: "Point",
+        coordinates: [-122.0474631, 37.3209744]
+      },
+      properties: {
+        description: "De Anza College",
+        "rotate": 0
+      }
+    });
+
     let timeThreshold = Date.now() - 20000;
     for (let [socketId, userObjRef] of this.locationMap) {
       if (userObjRef.timestamp < timeThreshold) {

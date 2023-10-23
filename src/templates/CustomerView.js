@@ -31,7 +31,7 @@ class App extends Component {
 
     this.state = {
       tripStatsBlock: "",
-      tripBlock: <p>Select a map position as your destination.</p>
+      tripBlock: <p>Select a map position where you saw a cat or an animal shelter you want to visit.</p>
     }
 
     this.positionUpdateLoop();
